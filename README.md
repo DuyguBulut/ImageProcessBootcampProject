@@ -11,6 +11,7 @@ Bu proje, Convolutional Neural Network (CNN) modellerinin temelini kavramayı ve
 
 **Veri Seti**
 Kullanılan veri seti: Animals with Attributes 2  ( https://www.kaggle.com/datasets/rrebirrth/animals-with-attributes-2 )
+
 Sınıflar: Collie, Dolphin, Elephant, Fox, Moose, Rabbit, Sheep, Squirrel, Giant Panda, Polar Bear
 
 **Veri işleme:**
