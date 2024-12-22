@@ -135,4 +135,6 @@ Modelin Performansını Takip Etme:
 
 Validation set üzerinde modelin doğruluğunu takip etmek, aşırı öğrenme (overfitting) veya yetersiz öğrenme (underfitting) durumlarının önüne geçebilir.
 
+**Sonuç**
 
+Manipülasyonlar ve renk sabitleme algoritması modelin performansını iyileştirmede bir miktar etkili olmuş olsa da, genel doğruluk oranı hala tatmin edici seviyelere ulaşmamış durumda. Yukarıda önerilen iyileştirme yöntemleri adım adım test edilerek, modelin manipülasyonlarla başa çıkabilme yeteneği artırılabilir.
