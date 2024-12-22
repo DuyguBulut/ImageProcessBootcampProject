@@ -83,7 +83,50 @@ Renk sabitliği algoritmaları
 
 **4. Sonuçların Karşılaştırılması**
 
-Üç farklı senaryoya ait başarı oranları karşılaştırıldı ve raporlandı.
+1. İlk Test Verileri Sonuçları
+Doğruluk: 67.56%
+Kayıp: 5.5746
+İlk test verileri ile modelin doğruluğu %67.56 olarak belirlenmiş ve kayıp 5.5746. Bu sonuç, modelin eğitim sırasında genel olarak doğru tahminler yapabildiğini, ancak mükemmel bir sonuç elde edilmediğini gösteriyor. Modelin genel başarısı, belirli bir problem üzerinde yapılacak iyileştirmelerle artırılabilir.
 
-Skor düşüşleri üzerine çözüm önerileri tartışıldı.
+2. Manipüle Edilmiş Test Verileri Sonuçları
+Doğruluk: 18.62%
+Kayıp: 54.2937
+Manipüle edilmiş test verileri ile elde edilen doğruluk oranı %18.62, kayıp ise 54.2937. Bu düşük doğruluk oranı, manipülasyonların modelin doğru sonuçlar üretmesini zorlaştırdığını gösteriyor. Manipülasyonlar, verilerin çok farklı bir biçime dönüşmesine neden olabilir ve modelin bu değişimlere uyum sağlaması zor olabilir.
+
+3. Renk Sabitliği Uygulanan Test Verileri Sonuçları
+Doğruluk: 65.30%
+Kayıp: 5.2612
+Renk sabitliği uygulanmış test verilerinde ise doğruluk %65.30, kayıp ise 5.2612. Bu sonuç, renk sabitliği algoritmasının manipülasyonların etkilerini kısmen azalttığını ve modelin manipüle edilmiş verilerde daha iyi performans göstermesini sağladığını gösteriyor. Manipülasyonlara rağmen modelin doğru tahmin yapabilmesi, renk sabitlemenin önemli bir iyileştirme sağladığını gösteriyor.
+
+Sonuçların Yetersiz Olma Sebepleri ve Çözüm Önerileri
+1. Manipülasyonların Model Performansını Düşürmesi
+Manipülasyonlar genellikle verinin doğal yapısını değiştirir ve modelin doğru tahminler yapmasını zorlaştırabilir. Bu durumun sebepleri şunlar olabilir:
+
+Veri Çeşitliliği: Modelin eğitildiği veriler manipüle edilmiş verilere uyum sağlamakta zorlanmış olabilir. Manipülasyonlar, özellikle renk değişimlerini içeriyorsa, modelin renklerin veya ışık koşullarının etkisini öğrenmesini zorlaştırabilir.
+Modelin Genel Başarısızlığı: Modelin manipülasyonlar karşısında başarısız olmasının diğer bir sebebi, modelin eğitim sırasında yeterince çeşitli veri ile eğitilmemiş olması olabilir. Özellikle yapay ışık koşullarını içeren veriler modelin başarısını düşürebilir.
+2. Renk Sabitliği Algoritmasının Yetersizliği
+Renk sabitliği algoritması bazı durumlarda etkili olsa da, daha karmaşık ışık koşullarında ya da çok fazla manipülasyon yapılan verilerde beklenen iyileştirmeyi sağlamakta zorlanabilir. Renk sabitleme işlemi, modelin manipülasyonları dengelemesine yardımcı olmuş ancak tam anlamıyla etki etmemiştir.
+
+Çözüm Önerileri
+Daha Fazla Veri ile Eğitim:
+
+Modelin manipülasyona karşı dayanıklılığını artırmak için daha fazla manipülasyonlu veri ile eğitim yapabiliriz. Bu sayede model manipülasyonlara karşı daha iyi genelleme yapabilir.
+Veri Augmentasyonu kullanıldı ancak yeterli olmadı, eğitim setine daha fazla çeşitlilik eklemek ve farklı parametrelerle yeniden eğitim yapmak (dönme, yakınlaştırma, renk değişimlerini içeren augmentasyonlar) modelin daha iyi genelleme yapmasına yardımcı olabilir.
+Renk Sabitliği Algoritmasını Geliştirme:
+
+Şu anda kullanılan renk sabitliği algoritması başarılı olmasına rağmen, farklı ışık koşulları ve daha karmaşık manipülasyonlar için daha gelişmiş algoritmalar kullanabilirsiniz. Örneğin, Huang ve Wang'ın 2019'da önerdiği algoritmalar gibi daha sofistike renk sabitleme teknikleri araştırılabilir.
+
+Modeli Geliştirme ve Parametre Ayarları:
+
+Model mimarisini gözden geçirebiliriz. Özellikle daha derin ağlar (daha fazla katman, farklı mimariler gibi) veya transfer öğrenme yöntemleri (örneğin, ResNet, VGG) modelin performansını artırabilir.
+Öğrenme oranı ve ağırlık güncelleme tekniklerini inceleyerek, eğitimde daha iyi sonuçlar elde edebiliriz.
+Modelin eğitimi sırasında daha fazla epoch kullanmak ve erken durdurma (early stopping) yöntemini gözden geçirmek, modelin daha iyi öğrenmesini sağlayabilir.
+
+Manipülasyon Tiplerinin Çeşitlendirilmesi:
+
+Renk manipülasyonu dışında başka tür manipülasyonlar (örneğin, parlaklık, kontrast değişimlerini içeren augmentasyonlar) eklemek, modelin farklı ışık ve renk koşullarına dayanıklılığını artırabilir.
+Modelin Performansını Takip Etme:
+
+Validation set üzerinde modelin doğruluğunu takip etmek, aşırı öğrenme (overfitting) veya yetersiz öğrenme (underfitting) durumlarının önüne geçebilir.
+
 
