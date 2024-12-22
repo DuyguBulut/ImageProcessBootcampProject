@@ -100,11 +100,17 @@ Renk sabitliği uygulanmış test verilerinde ise doğruluk %65.30, kayıp ise 5
 
 Sonuçların Yetersiz Olma Sebepleri ve Çözüm Önerileri
 1. Manipülasyonların Model Performansını Düşürmesi
+   
 Manipülasyonlar genellikle verinin doğal yapısını değiştirir ve modelin doğru tahminler yapmasını zorlaştırabilir. Bu durumun sebepleri şunlar olabilir:
 
-Veri Çeşitliliği: Modelin eğitildiği veriler manipüle edilmiş verilere uyum sağlamakta zorlanmış olabilir. Manipülasyonlar, özellikle renk değişimlerini içeriyorsa, modelin renklerin veya ışık koşullarının etkisini öğrenmesini zorlaştırabilir.
-Modelin Genel Başarısızlığı: Modelin manipülasyonlar karşısında başarısız olmasının diğer bir sebebi, modelin eğitim sırasında yeterince çeşitli veri ile eğitilmemiş olması olabilir. Özellikle yapay ışık koşullarını içeren veriler modelin başarısını düşürebilir.
+Veri Çeşitliliği: 
+Modelin eğitildiği veriler manipüle edilmiş verilere uyum sağlamakta zorlanmış olabilir. Manipülasyonlar, özellikle renk değişimlerini içeriyorsa, modelin renklerin veya ışık koşullarının etkisini öğrenmesini zorlaştırabilir.
+
+Modelin Genel Başarısızlığı: 
+Modelin manipülasyonlar karşısında başarısız olmasının diğer bir sebebi, modelin eğitim sırasında yeterince çeşitli veri ile eğitilmemiş olması olabilir. Özellikle yapay ışık koşullarını içeren veriler modelin başarısını düşürebilir.
+
 2. Renk Sabitliği Algoritmasının Yetersizliği
+
 Renk sabitliği algoritması bazı durumlarda etkili olsa da, daha karmaşık ışık koşullarında ya da çok fazla manipülasyon yapılan verilerde beklenen iyileştirmeyi sağlamakta zorlanabilir. Renk sabitleme işlemi, modelin manipülasyonları dengelemesine yardımcı olmuş ancak tam anlamıyla etki etmemiştir.
 
 Çözüm Önerileri
